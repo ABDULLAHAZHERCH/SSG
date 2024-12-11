@@ -1,5 +1,6 @@
 import { getPostData } from "../lib/posts";
 import Head from "next/head";
+import Link from "next/link";
 
 export async function getStaticProps() {
   const bigData = await getPostData();
@@ -25,6 +26,9 @@ export default function Home({ bigData }) {
       </Head>
       <h1>{bigData.data.title}</h1>
       <p>{bigData.data.date}</p>
+      <Link href="/about">
+        <a>Go to About Page</a>
+      </Link>
       <div dangerouslySetInnerHTML={{ __html: content }} />
     </>
   );
