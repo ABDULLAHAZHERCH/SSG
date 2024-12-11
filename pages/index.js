@@ -26,9 +26,7 @@ export default function Home({ bigData }) {
       </Head>
       <h1>{bigData.data.title}</h1>
       <p>{bigData.data.date}</p>
-      <Link href="/about">
-        <a>Go to About Page</a>
-      </Link>
+      <Link href="/about">Go to About Page</Link>
       <div dangerouslySetInnerHTML={{ __html: content }} />
     </>
   );
